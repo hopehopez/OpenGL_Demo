@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
-
+#import "CCView.h"
 @interface ViewController ()
-
+@property(nonnull,strong)CCView *myView;
 @end
 
 @implementation ViewController
@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+     self.myView = (CCView *)self.view;
 }
 
 
