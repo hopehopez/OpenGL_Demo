@@ -87,14 +87,26 @@
     glUseProgram(self.myPrograme);
     
     //6.设置顶点 纹理坐标
-    GLfloat attrArr[] = {
-        0.5f, -0.5f, -1.0f,     1.0f, 0.0f,
-        -0.5f, 0.5f, -1.0f,     0.0f, 1.0f,
-        -0.5f, -0.5f, -1.0f,    0.0f, 0.0f,
-        
-        0.5f, 0.5f, -1.0f,      1.0f, 1.0f,
-        -0.5f, 0.5f, -1.0f,     0.0f, 1.0f,
-        0.5f, -0.5f, -1.0f,     1.0f, 0.0f,
+//    GLfloat attrArr[] = {
+//        0.5f, -0.5f, -1.0f,     1.0f, 0.0f,
+//        -0.5f, 0.5f, -1.0f,     0.0f, 1.0f,
+//        -0.5f, -0.5f, -1.0f,    0.0f, 0.0f,
+//
+//        0.5f, 0.5f, -1.0f,      1.0f, 1.0f,
+//        -0.5f, 0.5f, -1.0f,     0.0f, 1.0f,
+//        0.5f, -0.5f, -1.0f,     1.0f, 0.0f,
+//    };
+    
+    //解决纹理导致(方法5)
+    //直接从源纹理坐标数据修改
+    GLfloat attrArr[] =
+    {
+    0.5f, -0.5f, 0.0f,        1.0f, 1.0f, //右下
+    -0.5f, 0.5f, 0.0f,        0.0f, 0.0f, // 左上
+    -0.5f, -0.5f, 0.0f,       0.0f, 1.0f, // 左下
+    0.5f, 0.5f, 0.0f,         1.0f, 0.0f, // 右上
+    -0.5f, 0.5f, 0.0f,        0.0f, 0.0f, // 左上
+    0.5f, -0.5f, 0.0f,        1.0f, 1.0f, // 右下
     };
     
     //7.处理顶点数据
@@ -137,12 +149,49 @@
     //11.设置纹理采样器  0 纹理
     glUniform1i(glGetUniformLocation(self.myPrograme, "colorMap"), 0);
     
+    //解决纹理导致(方法1)
+//    [self rotateTextureImage];
+    
     //12绘图
     glDrawArrays(GL_TRIANGLES, 0, 6);
     
     //13.从渲染缓冲区显示到屏幕上
     [self.myContext presentRenderbuffer:GL_RENDERBUFFER];
     
+}
+
+-(void)rotateTextureImage{
+    //注意，想要获取shader里面的变量，这里记得要在glLinkProgram后面，后面，后面！
+    //1. rotate等于shaderv.vsh中的uniform属性，rotateMatrix
+    GLuint rotate = glGetUniformLocation(self.myPrograme, "rotateMatrix");
+    
+    //2.获取渲旋转的弧度
+    float radians = 180 * 3.14159f / 180.0f;
+    
+     //3.求得弧度对于的sin\cos值
+    float s = sin(radians);
+    float c = cos(radians);
+    
+    //4.
+    /*
+        参考Z轴旋转矩阵
+        */
+    GLfloat zRotation[16] = {
+        c,-s,0,0,
+        s,c,0,0,
+        0,0,1,0,
+        0,0,0,1
+    };
+    
+    //5.设置旋转矩阵
+    /*
+     glUniformMatrix4fv (GLint location, GLsizei count, GLboolean transpose, const GLfloat* value)
+     location : 对于shader 中的ID
+     count : 个数
+     transpose : 转置
+     value : 指针
+     */
+    glUniformMatrix4fv(rotate, 1, GL_FALSE, zRotation);
 }
 
 //从图片中加载纹理
@@ -183,7 +232,18 @@
      参数3：绘制的图片
      */
     CGRect rect = CGRectMake(0, 0, width, height);
+    //使用默认方式绘制
     CGContextDrawImage(spriteContext, rect, spriteImage);
+  
+    /*
+    //解决纹理倒置方法2 解压图片时,将图片源文件翻转
+    //先向下平移图片高度 的距离
+    CGContextTranslateCTM(spriteContext, 0, height);
+    //通过y轴-1倍缩放实现翻转
+    CGContextScaleCTM(spriteContext, 1, -1);
+    //再绘制
+    CGContextDrawImage(spriteContext, rect, spriteImage);
+     */
     
     //6.释放上下文
     CGContextRelease(spriteContext);
