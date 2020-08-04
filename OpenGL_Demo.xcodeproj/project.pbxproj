@@ -55,6 +55,13 @@
 		1BFFBCCD24D2B833002DA35C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BFFBCCB24D2B833002DA35C /* LaunchScreen.storyboard */; };
 		1BFFBCD024D2B833002DA35C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFFBCCF24D2B833002DA35C /* main.m */; };
 		1BFFBCD524D2CEF1002DA35C /* kunkun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BFFBCD424D2CEF1002DA35C /* kunkun.jpg */; };
+		7C675F4724D98FE1004DFD72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C675F4624D98FE1004DFD72 /* AppDelegate.m */; };
+		7C675F4A24D98FE1004DFD72 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C675F4924D98FE1004DFD72 /* SceneDelegate.m */; };
+		7C675F4D24D98FE1004DFD72 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C675F4C24D98FE1004DFD72 /* ViewController.m */; };
+		7C675F5024D98FE1004DFD72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C675F4E24D98FE1004DFD72 /* Main.storyboard */; };
+		7C675F5224D98FE1004DFD72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C675F5124D98FE1004DFD72 /* Assets.xcassets */; };
+		7C675F5524D98FE1004DFD72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C675F5324D98FE1004DFD72 /* LaunchScreen.storyboard */; };
+		7C675F5824D98FE1004DFD72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C675F5724D98FE1004DFD72 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +145,18 @@
 		1BFFBCCE24D2B833002DA35C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BFFBCCF24D2B833002DA35C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BFFBCD424D2CEF1002DA35C /* kunkun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kunkun.jpg; sourceTree = "<group>"; };
+		7C675F4324D98FE0004DFD72 /* 006_GLKit三角形变换.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "006_GLKit三角形变换.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C675F4524D98FE1004DFD72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7C675F4624D98FE1004DFD72 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7C675F4824D98FE1004DFD72 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		7C675F4924D98FE1004DFD72 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		7C675F4B24D98FE1004DFD72 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7C675F4C24D98FE1004DFD72 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7C675F4F24D98FE1004DFD72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7C675F5124D98FE1004DFD72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7C675F5424D98FE1004DFD72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7C675F5624D98FE1004DFD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C675F5724D98FE1004DFD72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +189,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1BFFBCB824D2B831002DA35C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C675F4024D98FE0004DFD72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,6 +293,7 @@
 				1BB73A3C24D435CF00F42F33 /* 003_GLSL */,
 				1BF11FD224D826D300DBCA9E /* 004_GLSL纹理翻转 */,
 				1BF1203A24D94D4A00DBCA9E /* 005_GLSL三角形变换 */,
+				7C675F4424D98FE0004DFD72 /* 006_GLKit三角形变换 */,
 				1BFFBC9624D27FDD002DA35C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -279,6 +306,7 @@
 				1BB73A3B24D435CF00F42F33 /* 003_GLSL.app */,
 				1BF11FD124D826D300DBCA9E /* 004_GLSL纹理翻转.app */,
 				1BF1203924D94D4A00DBCA9E /* 005_GLSL三角形变换.app */,
+				7C675F4324D98FE0004DFD72 /* 006_GLKit三角形变换.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -319,6 +347,24 @@
 				1BFFBCCF24D2B833002DA35C /* main.m */,
 			);
 			path = "002_正方体旋转";
+			sourceTree = "<group>";
+		};
+		7C675F4424D98FE0004DFD72 /* 006_GLKit三角形变换 */ = {
+			isa = PBXGroup;
+			children = (
+				7C675F4524D98FE1004DFD72 /* AppDelegate.h */,
+				7C675F4624D98FE1004DFD72 /* AppDelegate.m */,
+				7C675F4824D98FE1004DFD72 /* SceneDelegate.h */,
+				7C675F4924D98FE1004DFD72 /* SceneDelegate.m */,
+				7C675F4B24D98FE1004DFD72 /* ViewController.h */,
+				7C675F4C24D98FE1004DFD72 /* ViewController.m */,
+				7C675F4E24D98FE1004DFD72 /* Main.storyboard */,
+				7C675F5124D98FE1004DFD72 /* Assets.xcassets */,
+				7C675F5324D98FE1004DFD72 /* LaunchScreen.storyboard */,
+				7C675F5624D98FE1004DFD72 /* Info.plist */,
+				7C675F5724D98FE1004DFD72 /* main.m */,
+			);
+			path = "006_GLKit三角形变换";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,12 +455,30 @@
 			productReference = 1BFFBCBB24D2B831002DA35C /* 002_正方体旋转.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7C675F4224D98FE0004DFD72 /* 006_GLKit三角形变换 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C675F5924D98FE1004DFD72 /* Build configuration list for PBXNativeTarget "006_GLKit三角形变换" */;
+			buildPhases = (
+				7C675F3F24D98FE0004DFD72 /* Sources */,
+				7C675F4024D98FE0004DFD72 /* Frameworks */,
+				7C675F4124D98FE0004DFD72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "006_GLKit三角形变换";
+			productName = "006_GLKit三角形变换";
+			productReference = 7C675F4324D98FE0004DFD72 /* 006_GLKit三角形变换.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1BFFBC8D24D27FDD002DA35C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = zsq;
 				TargetAttributes = {
@@ -432,6 +496,9 @@
 					};
 					1BFFBCBA24D2B831002DA35C = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					7C675F4224D98FE0004DFD72 = {
+						CreatedOnToolsVersion = 11.5;
 					};
 				};
 			};
@@ -453,6 +520,7 @@
 				1BB73A3A24D435CF00F42F33 /* 003_GLSL */,
 				1BF11FD024D826D300DBCA9E /* 004_GLSL纹理翻转 */,
 				1BF1203824D94D4A00DBCA9E /* 005_GLSL三角形变换 */,
+				7C675F4224D98FE0004DFD72 /* 006_GLKit三角形变换 */,
 			);
 		};
 /* End PBXProject section */
@@ -516,6 +584,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7C675F4124D98FE0004DFD72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C675F5524D98FE1004DFD72 /* LaunchScreen.storyboard in Resources */,
+				7C675F5224D98FE1004DFD72 /* Assets.xcassets in Resources */,
+				7C675F5024D98FE1004DFD72 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -576,6 +654,17 @@
 				1BFFBCBF24D2B831002DA35C /* AppDelegate.m in Sources */,
 				1BFFBCD024D2B833002DA35C /* main.m in Sources */,
 				1BFFBCC224D2B831002DA35C /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C675F3F24D98FE0004DFD72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C675F4D24D98FE1004DFD72 /* ViewController.m in Sources */,
+				7C675F4724D98FE1004DFD72 /* AppDelegate.m in Sources */,
+				7C675F5824D98FE1004DFD72 /* main.m in Sources */,
+				7C675F4A24D98FE1004DFD72 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +747,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				1BFFBCCC24D2B833002DA35C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7C675F4E24D98FE1004DFD72 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C675F4F24D98FE1004DFD72 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7C675F5324D98FE1004DFD72 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C675F5424D98FE1004DFD72 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -945,6 +1050,42 @@
 			};
 			name = Release;
 		};
+		7C675F5A24D98FE1004DFD72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				INFOPLIST_FILE = "006_GLKit三角形变换/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zsq.-06-GLKit-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7C675F5B24D98FE1004DFD72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				INFOPLIST_FILE = "006_GLKit三角形变换/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zsq.-06-GLKit-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -998,6 +1139,15 @@
 			buildConfigurations = (
 				1BFFBCD124D2B833002DA35C /* Debug */,
 				1BFFBCD224D2B833002DA35C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C675F5924D98FE1004DFD72 /* Build configuration list for PBXNativeTarget "006_GLKit三角形变换" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C675F5A24D98FE1004DFD72 /* Debug */,
+				7C675F5B24D98FE1004DFD72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
