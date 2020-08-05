@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0FFBB624DAB0C9001CCD54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FFBB524DAB0C9001CCD54 /* AppDelegate.m */; };
+		1B0FFBB924DAB0C9001CCD54 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FFBB824DAB0C9001CCD54 /* SceneDelegate.m */; };
+		1B0FFBBC24DAB0C9001CCD54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FFBBB24DAB0C9001CCD54 /* ViewController.m */; };
+		1B0FFBBF24DAB0C9001CCD54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FFBBD24DAB0C9001CCD54 /* Main.storyboard */; };
+		1B0FFBC124DAB0CB001CCD54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FFBC024DAB0CB001CCD54 /* Assets.xcassets */; };
+		1B0FFBC424DAB0CB001CCD54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FFBC224DAB0CB001CCD54 /* LaunchScreen.storyboard */; };
+		1B0FFBC724DAB0CB001CCD54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FFBC624DAB0CB001CCD54 /* main.m */; };
+		1B0FFBCC24DAB349001CCD54 /* CCPointParticleShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FFBCB24DAB349001CCD54 /* CCPointParticleShader.vsh */; };
+		1B0FFBCE24DABEBC001CCD54 /* CCPointParticleShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FFBCD24DABEBC001CCD54 /* CCPointParticleShader.fsh */; };
+		1B0FFBD124DAC0F6001CCD54 /* CCVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FFBD024DAC0F6001CCD54 /* CCVertexAttribArrayBuffer.m */; };
+		1B0FFBD424DAC86B001CCD54 /* CCPointParticleEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FFBD324DAC86B001CCD54 /* CCPointParticleEffect.m */; };
 		1BB73A3F24D435CF00F42F33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB73A3E24D435CF00F42F33 /* AppDelegate.m */; };
 		1BB73A4224D435CF00F42F33 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB73A4124D435CF00F42F33 /* SceneDelegate.m */; };
 		1BB73A4524D435CF00F42F33 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB73A4424D435CF00F42F33 /* ViewController.m */; };
@@ -67,6 +78,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B0FFBB224DAB0C9001CCD54 /* 007_粒子系统.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "007_粒子系统.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B0FFBB424DAB0C9001CCD54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1B0FFBB524DAB0C9001CCD54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1B0FFBB724DAB0C9001CCD54 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		1B0FFBB824DAB0C9001CCD54 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		1B0FFBBA24DAB0C9001CCD54 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1B0FFBBB24DAB0C9001CCD54 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1B0FFBBE24DAB0C9001CCD54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1B0FFBC024DAB0CB001CCD54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B0FFBC324DAB0CB001CCD54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B0FFBC524DAB0CB001CCD54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B0FFBC624DAB0CB001CCD54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1B0FFBCB24DAB349001CCD54 /* CCPointParticleShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = CCPointParticleShader.vsh; sourceTree = "<group>"; };
+		1B0FFBCD24DABEBC001CCD54 /* CCPointParticleShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = CCPointParticleShader.fsh; sourceTree = "<group>"; };
+		1B0FFBCF24DAC0F6001CCD54 /* CCVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
+		1B0FFBD024DAC0F6001CCD54 /* CCVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
+		1B0FFBD224DAC86B001CCD54 /* CCPointParticleEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCPointParticleEffect.h; sourceTree = "<group>"; };
+		1B0FFBD324DAC86B001CCD54 /* CCPointParticleEffect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCPointParticleEffect.m; sourceTree = "<group>"; };
 		1BB73A3B24D435CF00F42F33 /* 003_GLSL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 003_GLSL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB73A3D24D435CF00F42F33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1BB73A3E24D435CF00F42F33 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -164,6 +193,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1B0FFBAF24DAB0C9001CCD54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1BB73A3824D435CF00F42F33 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +245,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B0FFBB324DAB0C9001CCD54 /* 007_粒子系统 */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FFBB424DAB0C9001CCD54 /* AppDelegate.h */,
+				1B0FFBB524DAB0C9001CCD54 /* AppDelegate.m */,
+				1B0FFBB724DAB0C9001CCD54 /* SceneDelegate.h */,
+				1B0FFBB824DAB0C9001CCD54 /* SceneDelegate.m */,
+				1B0FFBBA24DAB0C9001CCD54 /* ViewController.h */,
+				1B0FFBBB24DAB0C9001CCD54 /* ViewController.m */,
+				1B0FFBD224DAC86B001CCD54 /* CCPointParticleEffect.h */,
+				1B0FFBD324DAC86B001CCD54 /* CCPointParticleEffect.m */,
+				1B0FFBCF24DAC0F6001CCD54 /* CCVertexAttribArrayBuffer.h */,
+				1B0FFBD024DAC0F6001CCD54 /* CCVertexAttribArrayBuffer.m */,
+				1B0FFBCB24DAB349001CCD54 /* CCPointParticleShader.vsh */,
+				1B0FFBCD24DABEBC001CCD54 /* CCPointParticleShader.fsh */,
+				1B0FFBBD24DAB0C9001CCD54 /* Main.storyboard */,
+				1B0FFBC024DAB0CB001CCD54 /* Assets.xcassets */,
+				1B0FFBC224DAB0CB001CCD54 /* LaunchScreen.storyboard */,
+				1B0FFBC524DAB0CB001CCD54 /* Info.plist */,
+				1B0FFBC624DAB0CB001CCD54 /* main.m */,
+			);
+			path = "007_粒子系统";
+			sourceTree = "<group>";
+		};
 		1BB73A3C24D435CF00F42F33 /* 003_GLSL */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +359,7 @@
 				1BF11FD224D826D300DBCA9E /* 004_GLSL纹理翻转 */,
 				1BF1203A24D94D4A00DBCA9E /* 005_GLSL三角形变换 */,
 				7C675F4424D98FE0004DFD72 /* 006_GLKit三角形变换 */,
+				1B0FFBB324DAB0C9001CCD54 /* 007_粒子系统 */,
 				1BFFBC9624D27FDD002DA35C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -312,6 +373,7 @@
 				1BF11FD124D826D300DBCA9E /* 004_GLSL纹理翻转.app */,
 				1BF1203924D94D4A00DBCA9E /* 005_GLSL三角形变换.app */,
 				7C675F4324D98FE0004DFD72 /* 006_GLKit三角形变换.app */,
+				1B0FFBB224DAB0C9001CCD54 /* 007_粒子系统.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -376,6 +438,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1B0FFBB124DAB0C9001CCD54 /* 007_粒子系统 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B0FFBC824DAB0CB001CCD54 /* Build configuration list for PBXNativeTarget "007_粒子系统" */;
+			buildPhases = (
+				1B0FFBAE24DAB0C9001CCD54 /* Sources */,
+				1B0FFBAF24DAB0C9001CCD54 /* Frameworks */,
+				1B0FFBB024DAB0C9001CCD54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "007_粒子系统";
+			productName = "007_粒子系统";
+			productReference = 1B0FFBB224DAB0C9001CCD54 /* 007_粒子系统.app */;
+			productType = "com.apple.product-type.application";
+		};
 		1BB73A3A24D435CF00F42F33 /* 003_GLSL */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BB73A5324D435D100F42F33 /* Build configuration list for PBXNativeTarget "003_GLSL" */;
@@ -488,6 +567,9 @@
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = zsq;
 				TargetAttributes = {
+					1B0FFBB124DAB0C9001CCD54 = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					1BB73A3A24D435CF00F42F33 = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -527,11 +609,24 @@
 				1BF11FD024D826D300DBCA9E /* 004_GLSL纹理翻转 */,
 				1BF1203824D94D4A00DBCA9E /* 005_GLSL三角形变换 */,
 				7C675F4224D98FE0004DFD72 /* 006_GLKit三角形变换 */,
+				1B0FFBB124DAB0C9001CCD54 /* 007_粒子系统 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1B0FFBB024DAB0C9001CCD54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B0FFBC424DAB0CB001CCD54 /* LaunchScreen.storyboard in Resources */,
+				1B0FFBC124DAB0CB001CCD54 /* Assets.xcassets in Resources */,
+				1B0FFBBF24DAB0C9001CCD54 /* Main.storyboard in Resources */,
+				1B0FFBCE24DABEBC001CCD54 /* CCPointParticleShader.fsh in Resources */,
+				1B0FFBCC24DAB349001CCD54 /* CCPointParticleShader.vsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1BB73A3924D435CF00F42F33 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -605,6 +700,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1B0FFBAE24DAB0C9001CCD54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B0FFBD124DAC0F6001CCD54 /* CCVertexAttribArrayBuffer.m in Sources */,
+				1B0FFBBC24DAB0C9001CCD54 /* ViewController.m in Sources */,
+				1B0FFBB624DAB0C9001CCD54 /* AppDelegate.m in Sources */,
+				1B0FFBD424DAC86B001CCD54 /* CCPointParticleEffect.m in Sources */,
+				1B0FFBC724DAB0CB001CCD54 /* main.m in Sources */,
+				1B0FFBB924DAB0C9001CCD54 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1BB73A3724D435CF00F42F33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -679,6 +787,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		1B0FFBBD24DAB0C9001CCD54 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B0FFBBE24DAB0C9001CCD54 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1B0FFBC224DAB0CB001CCD54 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B0FFBC324DAB0CB001CCD54 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		1BB73A4624D435CF00F42F33 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -778,6 +902,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1B0FFBC924DAB0CB001CCD54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				INFOPLIST_FILE = "007_粒子系统/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zsq.-07-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B0FFBCA24DAB0CB001CCD54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				INFOPLIST_FILE = "007_粒子系统/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zsq.-07-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1BB73A5124D435D100F42F33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1097,6 +1255,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1B0FFBC824DAB0CB001CCD54 /* Build configuration list for PBXNativeTarget "007_粒子系统" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B0FFBC924DAB0CB001CCD54 /* Debug */,
+				1B0FFBCA24DAB0CB001CCD54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1BB73A5324D435D100F42F33 /* Build configuration list for PBXNativeTarget "003_GLSL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
