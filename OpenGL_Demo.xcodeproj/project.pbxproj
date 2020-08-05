@@ -39,6 +39,8 @@
 		1BF1205824D94ECB00DBCA9E /* shaderf.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1205524D94ECB00DBCA9E /* shaderf.fsh */; };
 		1BF1206024D959F600DBCA9E /* GLESUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1205A24D959F600DBCA9E /* GLESUtils.m */; };
 		1BF1206124D959F600DBCA9E /* GLESMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1205C24D959F600DBCA9E /* GLESMath.c */; };
+		1BF1206324DA5C9200DBCA9E /* kunkun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1206224DA5C9100DBCA9E /* kunkun.jpg */; };
+		1BF1206524DA6ACF00DBCA9E /* kunkun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1206424DA6ACF00DBCA9E /* kunkun.jpg */; };
 		1BFFBC9A24D27FDD002DA35C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFFBC9924D27FDD002DA35C /* AppDelegate.m */; };
 		1BFFBC9D24D27FDD002DA35C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFFBC9C24D27FDD002DA35C /* SceneDelegate.m */; };
 		1BFFBCA024D27FDE002DA35C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFFBC9F24D27FDE002DA35C /* ViewController.m */; };
@@ -119,6 +121,8 @@
 		1BF1205D24D959F600DBCA9E /* GLESUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESUtils.h; sourceTree = "<group>"; };
 		1BF1205E24D959F600DBCA9E /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
 		1BF1205F24D959F600DBCA9E /* GLESMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESMath.h; sourceTree = "<group>"; };
+		1BF1206224DA5C9100DBCA9E /* kunkun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kunkun.jpg; sourceTree = "<group>"; };
+		1BF1206424DA6ACF00DBCA9E /* kunkun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kunkun.jpg; sourceTree = "<group>"; };
 		1BFFBC9524D27FDD002DA35C /* OpenGL_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGL_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BFFBC9824D27FDD002DA35C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1BFFBC9924D27FDD002DA35C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 				1BF1205324D94ECB00DBCA9E /* CCView.m */,
 				1BF1205524D94ECB00DBCA9E /* shaderf.fsh */,
 				1BF1205424D94ECB00DBCA9E /* shaderv.vsh */,
+				1BF1206424DA6ACF00DBCA9E /* kunkun.jpg */,
 				1BF1204424D94D4A00DBCA9E /* Main.storyboard */,
 				1BF1204724D94D4C00DBCA9E /* Assets.xcassets */,
 				1BF1204924D94D4C00DBCA9E /* LaunchScreen.storyboard */,
@@ -352,6 +357,7 @@
 		7C675F4424D98FE0004DFD72 /* 006_GLKit三角形变换 */ = {
 			isa = PBXGroup;
 			children = (
+				1BF1206224DA5C9100DBCA9E /* kunkun.jpg */,
 				7C675F4524D98FE1004DFD72 /* AppDelegate.h */,
 				7C675F4624D98FE1004DFD72 /* AppDelegate.m */,
 				7C675F4824D98FE1004DFD72 /* SceneDelegate.h */,
@@ -555,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BF1205824D94ECB00DBCA9E /* shaderf.fsh in Resources */,
+				1BF1206524DA6ACF00DBCA9E /* kunkun.jpg in Resources */,
 				1BF1204B24D94D4C00DBCA9E /* LaunchScreen.storyboard in Resources */,
 				1BF1204824D94D4C00DBCA9E /* Assets.xcassets in Resources */,
 				1BF1204624D94D4A00DBCA9E /* Main.storyboard in Resources */,
@@ -589,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C675F5524D98FE1004DFD72 /* LaunchScreen.storyboard in Resources */,
+				1BF1206324DA5C9200DBCA9E /* kunkun.jpg in Resources */,
 				7C675F5224D98FE1004DFD72 /* Assets.xcassets in Resources */,
 				7C675F5024D98FE1004DFD72 /* Main.storyboard in Resources */,
 			);

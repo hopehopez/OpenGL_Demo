@@ -18,7 +18,7 @@
 @property (nonatomic, assign) GLuint myColorRenderBuffer;
 @property (nonatomic, assign) GLuint myColorFrameBuffer;
 
-@property (nonatomic, assign) GLuint myPrograme;
+@property (nonatomic, assign) GLuint myProgram;
 @end
 
 @implementation CCView
@@ -66,17 +66,17 @@
     NSLog(@"fragFile:%@",fragFile);
     
     //3.加载shader
-    self.myPrograme = [self loadShaders:vertFile Withfrag:fragFile];
+    self.myProgram = [self loadShaders:vertFile Withfrag:fragFile];
     
     //4.链接
-    glLinkProgram(self.myPrograme);
+    glLinkProgram(self.myProgram);
     
     GLint linkStatus;
     //获取链接状态
-    glGetProgramiv(self.myPrograme, GL_LINK_STATUS, &linkStatus);
+    glGetProgramiv(self.myProgram, GL_LINK_STATUS, &linkStatus);
     if (linkStatus == GL_FALSE) {
         GLchar message[512];
-        glGetProgramInfoLog(self.myPrograme, sizeof(message), 0, &message[0]);
+        glGetProgramInfoLog(self.myProgram, sizeof(message), 0, &message[0]);
         NSString *messageString = [NSString stringWithUTF8String:message];
         NSLog(@"Program Link Error:%@",messageString);
         return;
@@ -84,7 +84,7 @@
     NSLog(@"Program Link Success!");
     
     //5.使用program
-    glUseProgram(self.myPrograme);
+    glUseProgram(self.myProgram);
     
     //6.设置顶点 纹理坐标
 //    GLfloat attrArr[] = {
@@ -119,9 +119,9 @@
     //4)把顶点数据从CPU内存复制到GPU上
     glBufferData(GL_ARRAY_BUFFER, sizeof(attrArr), attrArr, GL_DYNAMIC_DRAW);
     
-    //8.将顶点数据通过myPrograme 传递到顶点着色程序的position
+    //8.将顶点数据通过myProgram 传递到顶点着色程序的position
     //1)获取顶点数据通道ID
-    GLuint position = glGetAttribLocation(self.myPrograme, "position");
+    GLuint position = glGetAttribLocation(self.myProgram, "position");
     
     //2)设置合适的格式从buffer里面读取数据
     //打开通道
@@ -137,7 +137,7 @@
     glVertexAttribPointer(position, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*5, NULL);
     
     //9.处理纹理数据
-    GLuint textCoor = glGetAttribLocation(self.myPrograme, "textCoordinate");
+    GLuint textCoor = glGetAttribLocation(self.myProgram, "textCoordinate");
     
     glEnableVertexAttribArray(textCoor);
     
@@ -147,7 +147,7 @@
     [self setupTexture:@"kunkun"];
     
     //11.设置纹理采样器  0 纹理
-    glUniform1i(glGetUniformLocation(self.myPrograme, "colorMap"), 0);
+    glUniform1i(glGetUniformLocation(self.myProgram, "colorMap"), 0);
     
     //解决纹理导致(方法1)
 //    [self rotateTextureImage];
@@ -163,7 +163,7 @@
 -(void)rotateTextureImage{
     //注意，想要获取shader里面的变量，这里记得要在glLinkProgram后面，后面，后面！
     //1. rotate等于shaderv.vsh中的uniform属性，rotateMatrix
-    GLuint rotate = glGetUniformLocation(self.myPrograme, "rotateMatrix");
+    GLuint rotate = glGetUniformLocation(self.myProgram, "rotateMatrix");
     
     //2.获取渲旋转的弧度
     float radians = 180 * 3.14159f / 180.0f;

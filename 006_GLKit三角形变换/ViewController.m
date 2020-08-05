@@ -41,16 +41,23 @@
 }
 
 - (void)render{
+//    GLfloat attrArr[] =
+//    {
+//        -0.5f, 0.5f, 0.0f,      1.0f, 0.0f, 1.0f, //左上
+//        0.5f, 0.5f, 0.0f,       1.0f, 0.0f, 1.0f, //右上
+//        -0.5f, -0.5f, 0.0f,     1.0f, 1.0f, 1.0f, //左下
+//
+//        0.5f, -0.5f, 0.0f,      1.0f, 1.0f, 1.0f, //右下
+//        0.0f, 0.0f, 1.0f,       0.0f, 1.0f, 0.0f, //顶点
+//    };
     GLfloat attrArr[] =
     {
-        -0.5f, 0.5f, 0.0f,      1.0f, 0.0f, 1.0f, //左上
-        0.5f, 0.5f, 0.0f,       1.0f, 0.0f, 1.0f, //右上
-        -0.5f, -0.5f, 0.0f,     1.0f, 1.0f, 1.0f, //左下
-        
-        0.5f, -0.5f, 0.0f,      1.0f, 1.0f, 1.0f, //右下
-        0.0f, 0.0f, 1.0f,       0.0f, 1.0f, 0.0f, //顶点
+        -0.5f, 0.5f, 0.0f,      0.0f, 0.0f, 0.5f,       0.0f, 1.0f,//左上
+        0.5f, 0.5f, 0.0f,       0.0f, 0.5f, 0.0f,       1.0f, 1.0f,//右上
+        -0.5f, -0.5f, 0.0f,     0.5f, 0.0f, 1.0f,       0.0f, 0.0f,//左下
+        0.5f, -0.5f, 0.0f,      0.0f, 0.0f, 0.5f,       1.0f, 0.0f,//右下
+        0.0f, 0.0f, 1.0f,       1.0f, 1.0f, 1.0f,       0.5f, 0.5f,//顶点
     };
-    
     //2.绘图索引
     GLuint indices[] =
     {
@@ -79,14 +86,25 @@
     
     //使用顶点数组
     glEnableVertexAttribArray(GLKVertexAttribPosition);
-    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*6, NULL);
+    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, NULL);
     
     //使用颜色数据
     glEnableVertexAttribArray(GLKVertexAttribColor);
-    glVertexAttribPointer(GLKVertexAttribColor, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*6, (GLfloat *)NULL+3);
+    glVertexAttribPointer(GLKVertexAttribColor, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, (GLfloat *)NULL+3);
+    
+    //使用纹理数据
+    glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
+    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, (GLfloat *)NULL+6);
+    
+    //纹理加载
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"kunkun" ofType:@"jpg"];
+    NSDictionary *options = @{GLKTextureLoaderOriginBottomLeft: @1};
+    GLKTextureInfo *textureInfo = [GLKTextureLoader textureWithContentsOfFile:filePath options:options error:nil];
     
     //着色器
     self.mEffect = [[GLKBaseEffect alloc] init];
+    self.mEffect.texture2d0.enabled = YES;
+    self.mEffect.texture2d0.name = textureInfo.name;
     
     //投影视图
     CGSize size = self.view.bounds.size;
