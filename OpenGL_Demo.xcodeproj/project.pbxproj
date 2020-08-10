@@ -85,6 +85,10 @@
 		1BF1206124D959F600DBCA9E /* GLESMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1205C24D959F600DBCA9E /* GLESMath.c */; };
 		1BF1206324DA5C9200DBCA9E /* kunkun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1206224DA5C9100DBCA9E /* kunkun.jpg */; };
 		1BF1206524DA6ACF00DBCA9E /* kunkun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1206424DA6ACF00DBCA9E /* kunkun.jpg */; };
+		1BFC898C24E1530B00E42D0E /* Normal.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 1BFC898B24E1530B00E42D0E /* Normal.vsh */; };
+		1BFC898E24E1531900E42D0E /* Normal.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1BFC898D24E1531900E42D0E /* Normal.fsh */; };
+		1BFC899124E15B9700E42D0E /* SplitScreen_2.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 1BFC899024E15B9700E42D0E /* SplitScreen_2.vsh */; };
+		1BFC899524E15BBD00E42D0E /* SplitScreen_2.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1BFC899424E15BBD00E42D0E /* SplitScreen_2.fsh */; };
 		1BFFBC9A24D27FDD002DA35C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFFBC9924D27FDD002DA35C /* AppDelegate.m */; };
 		1BFFBC9D24D27FDD002DA35C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFFBC9C24D27FDD002DA35C /* SceneDelegate.m */; };
 		1BFFBCA024D27FDE002DA35C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFFBC9F24D27FDE002DA35C /* ViewController.m */; };
@@ -249,6 +253,10 @@
 		1BF1205F24D959F600DBCA9E /* GLESMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESMath.h; sourceTree = "<group>"; };
 		1BF1206224DA5C9100DBCA9E /* kunkun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kunkun.jpg; sourceTree = "<group>"; };
 		1BF1206424DA6ACF00DBCA9E /* kunkun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kunkun.jpg; sourceTree = "<group>"; };
+		1BFC898B24E1530B00E42D0E /* Normal.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Normal.vsh; sourceTree = "<group>"; };
+		1BFC898D24E1531900E42D0E /* Normal.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Normal.fsh; sourceTree = "<group>"; };
+		1BFC899024E15B9700E42D0E /* SplitScreen_2.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SplitScreen_2.vsh; sourceTree = "<group>"; };
+		1BFC899424E15BBD00E42D0E /* SplitScreen_2.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SplitScreen_2.fsh; sourceTree = "<group>"; };
 		1BFFBC9524D27FDD002DA35C /* OpenGL_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGL_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BFFBC9824D27FDD002DA35C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1BFFBC9924D27FDD002DA35C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -577,6 +585,33 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		1BFC898924E149CD00E42D0E /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				1BFC898F24E15B7A00E42D0E /* SplitScreen_2 */,
+				1BFC898A24E152F800E42D0E /* Normal */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		1BFC898A24E152F800E42D0E /* Normal */ = {
+			isa = PBXGroup;
+			children = (
+				1BFC898B24E1530B00E42D0E /* Normal.vsh */,
+				1BFC898D24E1531900E42D0E /* Normal.fsh */,
+			);
+			path = Normal;
+			sourceTree = "<group>";
+		};
+		1BFC898F24E15B7A00E42D0E /* SplitScreen_2 */ = {
+			isa = PBXGroup;
+			children = (
+				1BFC899024E15B9700E42D0E /* SplitScreen_2.vsh */,
+				1BFC899424E15BBD00E42D0E /* SplitScreen_2.fsh */,
+			);
+			path = SplitScreen_2;
+			sourceTree = "<group>";
+		};
 		1BFFBC8C24D27FDD002DA35C = {
 			isa = PBXGroup;
 			children = (
@@ -682,6 +717,7 @@
 				7C675F6824E02FE0004DFD72 /* ViewController.h */,
 				7C675F6924E02FE0004DFD72 /* ViewController.m */,
 				7C675F8024E0309F004DFD72 /* kunkun.jpg */,
+				1BFC898924E149CD00E42D0E /* Filter */,
 				7C675F8624E0353C004DFD72 /* Tool */,
 				7C675F6B24E02FE0004DFD72 /* Main.storyboard */,
 				7C675F6E24E02FE2004DFD72 /* Assets.xcassets */,
@@ -1118,9 +1154,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BFC898E24E1531900E42D0E /* Normal.fsh in Resources */,
+				1BFC898C24E1530B00E42D0E /* Normal.vsh in Resources */,
 				7C675F7224E02FE2004DFD72 /* LaunchScreen.storyboard in Resources */,
 				7C675F8124E0309F004DFD72 /* kunkun.jpg in Resources */,
 				7C675F6F24E02FE2004DFD72 /* Assets.xcassets in Resources */,
+				1BFC899524E15BBD00E42D0E /* SplitScreen_2.fsh in Resources */,
+				1BFC899124E15B9700E42D0E /* SplitScreen_2.vsh in Resources */,
 				7C675F6D24E02FE0004DFD72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
