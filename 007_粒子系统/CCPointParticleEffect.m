@@ -147,8 +147,102 @@ typedef enum {
     newParticle.emissionForce = aForce;
     newParticle.size = GLKVector2Make(aSize, aDuration);
     newParticle.emissionTimeAndLife = GLKVector2Make(elapsedSeconds, elapsedSeconds+aSpan);
+    
+    
+    BOOL foundSlot = NO;
+    
+    const long count = self.numberOfParticles;
+    
+    for (int i=0; i<count && !foundSlot; i++) {
+        //获取当前旧例子
+        CCParticleAttributes oldParticle = [self particleAtIndex:i];
+        
+        if (oldParticle.emissionTimeAndLife.y<self.elapsedSeconds) {
+            [self setParticle:newParticle atIndex:i];
+            
+            foundSlot = YES;
+        }
+    }
+    
+    //如果不替换
+    if (!foundSlot) {
+        //在particleAttributesData 拼接新的数据
+        [self.particleAttributesData appendBytes:&newParticle length:sizeof(newParticle)];
+        
+        self.particleDataWasUpdated = YES;
+    }
 }
 
+//获取粒子个数
+- (NSUInteger)numberOfParticles{
+    static long last;
+    
+    //总数据大小/粒子结构体大小
+    long ret = [self.particleAttributesData bytes]/sizeof(CCParticleAttributes);
+    
+    //如果last != ret 表示粒子个数更新了
+    if (ret != last) {
+        last = ret;
+        NSLog(@"粒子总数 %ld", last);
+    }
+    return ret;
+}
+
+- (void)prepareToDraw{
+    if (program == 0) {
+        
+    }
+}
+
+#pragma mark -  OpenGL ES shader compilation
+
+- (void)loadShaders{
+    GLuint vertShader, fragShader;
+    NSString *vertShaderPathname, *fragShaderPathname;
+    
+    //
+    program = glCreateProgram();
+    
+    //创建并编译 vertex shader.
+    vertShaderPathname = [[NSBundle mainBundle] pathForResource:
+                          @"CCPointParticleShader" ofType:@"vsh"];
+    if (![self compileShader:&vertShader type:GL_VERTEX_SHADER
+                        file:vertShaderPathname])
+    {
+        NSLog(@"Failed to compile vertex shader");
+        return NO;
+    }
+    
+    // 创建并编译 fragment shader.
+    fragShaderPathname = [[NSBundle mainBundle] pathForResource:
+                          @"CCPointParticleShader" ofType:@"fsh"];
+    if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER
+                        file:fragShaderPathname])
+    {
+        NSLog(@"Failed to compile fragment shader");
+        return NO;
+    }
+}
+
+
+
+//编译shader
+- (BOOL)compileShader:(GLuint *)shader
+                 type:(GLenum)type
+                 file:(NSString *)file
+{
+    const char * source;
+    
+    source = (GLchar *)[[NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil] UTF8String];
+    
+    if (!source) {
+        NSLog(@"Failed to load vertex shader");
+        return NO;
+    }
+    
+    //创建shader
+    
+}
 
 //默认重力加速度向量与地球的匹配
 //{ 0，（-9.80665米/秒/秒），0 }假设+ Y坐标系的建立
