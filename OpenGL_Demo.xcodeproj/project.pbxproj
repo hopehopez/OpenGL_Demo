@@ -51,6 +51,10 @@
 		1B0FFC8624DBDF6B001CCD54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FFC8424DBDF6B001CCD54 /* LaunchScreen.storyboard */; };
 		1B0FFC8924DBDF6B001CCD54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FFC8824DBDF6B001CCD54 /* main.m */; };
 		1B0FFC8F24DBDF9D001CCD54 /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FFC8E24DBDF9D001CCD54 /* LikeButton.m */; };
+		1B1EE81C24E2A72900DC9949 /* Gray.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 1B1EE81B24E2A72900DC9949 /* Gray.vsh */; };
+		1B1EE81E24E2A73300DC9949 /* Gray.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1B1EE81D24E2A73300DC9949 /* Gray.fsh */; };
+		1B1EE82024E2A98E00DC9949 /* Reversal.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 1B1EE81F24E2A98E00DC9949 /* Reversal.vsh */; };
+		1B1EE82224E2A99800DC9949 /* Reversal.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1B1EE82124E2A99800DC9949 /* Reversal.fsh */; };
 		1BB73A3F24D435CF00F42F33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB73A3E24D435CF00F42F33 /* AppDelegate.m */; };
 		1BB73A4224D435CF00F42F33 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB73A4124D435CF00F42F33 /* SceneDelegate.m */; };
 		1BB73A4524D435CF00F42F33 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB73A4424D435CF00F42F33 /* ViewController.m */; };
@@ -69,6 +73,8 @@
 		1BDCC25F24E294FB00F3215D /* SplitScreen_6.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1BDCC25E24E294FB00F3215D /* SplitScreen_6.fsh */; };
 		1BDCC26424E295E600F3215D /* SplitScreen_9.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 1BDCC26324E295E600F3215D /* SplitScreen_9.vsh */; };
 		1BDCC26624E295F500F3215D /* SplitScreen_9.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1BDCC26524E295F500F3215D /* SplitScreen_9.fsh */; };
+		1BDCC27124E2A59D00F3215D /* Normal.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1BDCC26F24E2A59C00F3215D /* Normal.fsh */; };
+		1BDCC27224E2A59D00F3215D /* Normal.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 1BDCC27024E2A59C00F3215D /* Normal.vsh */; };
 		1BF11FD524D826D300DBCA9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF11FD424D826D300DBCA9E /* AppDelegate.m */; };
 		1BF11FD824D826D300DBCA9E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF11FD724D826D300DBCA9E /* SceneDelegate.m */; };
 		1BF11FDB24D826D300DBCA9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF11FDA24D826D300DBCA9E /* ViewController.m */; };
@@ -205,6 +211,10 @@
 		1B0FFC8824DBDF6B001CCD54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1B0FFC8D24DBDF9D001CCD54 /* LikeButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LikeButton.h; sourceTree = "<group>"; };
 		1B0FFC8E24DBDF9D001CCD54 /* LikeButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LikeButton.m; sourceTree = "<group>"; };
+		1B1EE81B24E2A72900DC9949 /* Gray.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Gray.vsh; sourceTree = "<group>"; };
+		1B1EE81D24E2A73300DC9949 /* Gray.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Gray.fsh; sourceTree = "<group>"; };
+		1B1EE81F24E2A98E00DC9949 /* Reversal.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Reversal.vsh; sourceTree = "<group>"; };
+		1B1EE82124E2A99800DC9949 /* Reversal.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Reversal.fsh; sourceTree = "<group>"; };
 		1BB73A3B24D435CF00F42F33 /* 003_GLSL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 003_GLSL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB73A3D24D435CF00F42F33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1BB73A3E24D435CF00F42F33 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -229,6 +239,8 @@
 		1BDCC25E24E294FB00F3215D /* SplitScreen_6.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SplitScreen_6.fsh; sourceTree = "<group>"; };
 		1BDCC26324E295E600F3215D /* SplitScreen_9.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SplitScreen_9.vsh; sourceTree = "<group>"; };
 		1BDCC26524E295F500F3215D /* SplitScreen_9.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SplitScreen_9.fsh; sourceTree = "<group>"; };
+		1BDCC26F24E2A59C00F3215D /* Normal.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Normal.fsh; sourceTree = "<group>"; };
+		1BDCC27024E2A59C00F3215D /* Normal.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Normal.vsh; sourceTree = "<group>"; };
 		1BF11FD124D826D300DBCA9E /* 004_GLSL纹理翻转.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "004_GLSL纹理翻转.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF11FD324D826D300DBCA9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1BF11FD424D826D300DBCA9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -578,6 +590,62 @@
 			path = SplitScreen_9;
 			sourceTree = "<group>";
 		};
+		1BDCC26724E2A59C00F3215D /* Gray */ = {
+			isa = PBXGroup;
+			children = (
+				1B1EE81B24E2A72900DC9949 /* Gray.vsh */,
+				1B1EE81D24E2A73300DC9949 /* Gray.fsh */,
+			);
+			path = Gray;
+			sourceTree = "<group>";
+		};
+		1BDCC26924E2A59C00F3215D /* Reversal */ = {
+			isa = PBXGroup;
+			children = (
+				1B1EE81F24E2A98E00DC9949 /* Reversal.vsh */,
+				1B1EE82124E2A99800DC9949 /* Reversal.fsh */,
+			);
+			path = Reversal;
+			sourceTree = "<group>";
+		};
+		1BDCC26A24E2A59C00F3215D /* HexagonMosaic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HexagonMosaic;
+			sourceTree = "<group>";
+		};
+		1BDCC26B24E2A59C00F3215D /* Mosaic */ = {
+			isa = PBXGroup;
+			children = (
+				1BDCC26C24E2A59C00F3215D /* HexagonMosaic */,
+			);
+			path = Mosaic;
+			sourceTree = "<group>";
+		};
+		1BDCC26C24E2A59C00F3215D /* HexagonMosaic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HexagonMosaic;
+			sourceTree = "<group>";
+		};
+		1BDCC26D24E2A59C00F3215D /* TriangularMosaic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TriangularMosaic;
+			sourceTree = "<group>";
+		};
+		1BDCC26E24E2A59C00F3215D /* Normal */ = {
+			isa = PBXGroup;
+			children = (
+				1BDCC26F24E2A59C00F3215D /* Normal.fsh */,
+				1BDCC27024E2A59C00F3215D /* Normal.vsh */,
+			);
+			path = Normal;
+			sourceTree = "<group>";
+		};
 		1BF11FD224D826D300DBCA9E /* 004_GLSL纹理翻转 */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +708,12 @@
 		1BFC898924E149CD00E42D0E /* Filter */ = {
 			isa = PBXGroup;
 			children = (
+				1BDCC26724E2A59C00F3215D /* Gray */,
+				1BDCC26A24E2A59C00F3215D /* HexagonMosaic */,
+				1BDCC26B24E2A59C00F3215D /* Mosaic */,
+				1BDCC26E24E2A59C00F3215D /* Normal */,
+				1BDCC26924E2A59C00F3215D /* Reversal */,
+				1BDCC26D24E2A59C00F3215D /* TriangularMosaic */,
 				1BDCC26224E295D900F3215D /* SplitScreen_9 */,
 				1BDCC25B24E294E700F3215D /* SplitScreen_6 */,
 				1BDCC25624E2941100F3215D /* SplitScreen_4 */,
@@ -1212,16 +1286,22 @@
 			files = (
 				1BFC898E24E1531900E42D0E /* Normal.fsh in Resources */,
 				1BDCC25324E2929C00F3215D /* SplitScreen_3.fsh in Resources */,
+				1BDCC27224E2A59D00F3215D /* Normal.vsh in Resources */,
+				1B1EE81C24E2A72900DC9949 /* Gray.vsh in Resources */,
 				1BFC898C24E1530B00E42D0E /* Normal.vsh in Resources */,
 				1BDCC25A24E2942A00F3215D /* SplitScreen_4.fsh in Resources */,
 				1BDCC26624E295F500F3215D /* SplitScreen_9.fsh in Resources */,
 				1BDCC26424E295E600F3215D /* SplitScreen_9.vsh in Resources */,
 				7C675F7224E02FE2004DFD72 /* LaunchScreen.storyboard in Resources */,
+				1B1EE82224E2A99800DC9949 /* Reversal.fsh in Resources */,
 				1BDCC25F24E294FB00F3215D /* SplitScreen_6.fsh in Resources */,
+				1B1EE82024E2A98E00DC9949 /* Reversal.vsh in Resources */,
 				7C675F8124E0309F004DFD72 /* kunkun.jpg in Resources */,
 				1BDCC25824E2941D00F3215D /* SplitScreen_4.vsh in Resources */,
 				1BDCC25D24E294F200F3215D /* SplitScreen_6.vsh in Resources */,
 				7C675F6F24E02FE2004DFD72 /* Assets.xcassets in Resources */,
+				1B1EE81E24E2A73300DC9949 /* Gray.fsh in Resources */,
+				1BDCC27124E2A59D00F3215D /* Normal.fsh in Resources */,
 				1BDCC25524E292A700F3215D /* SplitScreen_3.vsh in Resources */,
 				1BFC899524E15BBD00E42D0E /* SplitScreen_2.fsh in Resources */,
 				1BFC899124E15B9700E42D0E /* SplitScreen_2.vsh in Resources */,

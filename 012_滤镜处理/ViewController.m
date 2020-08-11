@@ -62,7 +62,7 @@ typedef struct {
     filerBar.delegate = self;
     [self.view addSubview:filerBar];
     
-    NSArray *dataSource = @[@"无",@"分屏_2",@"分屏_3",@"分屏_4",@"分屏_6",@"分屏_9"];
+    NSArray *dataSource = @[@"无",@"分屏_2",@"分屏_3",@"分屏_4",@"分屏_6",@"分屏_9",@"灰度",@"颠倒",@"马赛克",@"六边形马赛克",@"三角形马赛克"];
     filerBar.itemList = dataSource;
 }
 
@@ -101,7 +101,7 @@ typedef struct {
     //7.设置视口
     glViewport(0, 0, [self drawableWidth], [self drawableHeight]);
     
-     //8.设置顶点缓存区
+    //8.设置顶点缓存区
     GLuint vertexBuffer;
     glGenBuffers(1, &vertexBuffer);
     glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
@@ -114,7 +114,7 @@ typedef struct {
     //10.将顶点缓存保存，退出时才释放
     self.vertexBuffer = vertexBuffer;
 }
-     
+
 #pragma mark - 绑定渲染缓冲区
 - (void)bindRenderLayer:(CALayer <EAGLDrawable> *)layer {
     //1.渲染缓存区,帧缓存区对象
@@ -130,22 +130,22 @@ typedef struct {
     glGenFramebuffers(1, &frameBuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, frameBuffer);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, renderBuffer);
-//    //1.渲染缓存区,帧缓存区对象
-//       GLuint renderBuffer;
-//       GLuint frameBuffer;
-//
-//       //2.获取帧渲染缓存区名称,绑定渲染缓存区以及将渲染缓存区与layer建立连接
-//       glGenRenderbuffers(1, &renderBuffer);
-//       glBindRenderbuffer(GL_RENDERBUFFER, renderBuffer);
-//       [self.context renderbufferStorage:GL_RENDERBUFFER fromDrawable:layer];
-//
-//       //3.获取帧缓存区名称,绑定帧缓存区以及将渲染缓存区附着到帧缓存区上
-//       glGenFramebuffers(1, &frameBuffer);
-//       glBindFramebuffer(GL_FRAMEBUFFER, frameBuffer);
-//       glFramebufferRenderbuffer(GL_FRAMEBUFFER,
-//                                 GL_COLOR_ATTACHMENT0,
-//                                 GL_RENDERBUFFER,
-//                                 renderBuffer);
+    //    //1.渲染缓存区,帧缓存区对象
+    //       GLuint renderBuffer;
+    //       GLuint frameBuffer;
+    //
+    //       //2.获取帧渲染缓存区名称,绑定渲染缓存区以及将渲染缓存区与layer建立连接
+    //       glGenRenderbuffers(1, &renderBuffer);
+    //       glBindRenderbuffer(GL_RENDERBUFFER, renderBuffer);
+    //       [self.context renderbufferStorage:GL_RENDERBUFFER fromDrawable:layer];
+    //
+    //       //3.获取帧缓存区名称,绑定帧缓存区以及将渲染缓存区附着到帧缓存区上
+    //       glGenFramebuffers(1, &frameBuffer);
+    //       glBindFramebuffer(GL_FRAMEBUFFER, frameBuffer);
+    //       glFramebufferRenderbuffer(GL_FRAMEBUFFER,
+    //                                 GL_COLOR_ATTACHMENT0,
+    //                                 GL_RENDERBUFFER,
+    //                                 renderBuffer);
 }
 
 #pragma mark - 从图片中加载纹理
@@ -288,6 +288,20 @@ typedef struct {
     }else if(index == 5)
     {
         [self setupSplitScreen_9ShaderProgram];
+    }else if (index == 6) {
+        [self setupGrayShaderProgram];
+    }else if(index == 7)
+    {
+        [self setupReversalShaderProgram];
+    }else if (index == 8)
+    {
+        [self setupMosaicShaderProgram];
+    }else if (index == 9)
+    {
+        [self setupHexagonMosaicShaderProgram];
+    }else if (index == 10)
+    {
+        [self setupTriangularMosaicShaderProgram];
     }
     // 重新开始滤镜动画
 //    [self startFilerAnimation];
@@ -324,6 +338,35 @@ typedef struct {
     [self setupShaderProgramWithName:@"SplitScreen_9"];
 }
 
+// 灰度滤镜着色器程序
+- (void)setupGrayShaderProgram {
+    //设置着色器程序
+    [self setupShaderProgramWithName:@"Gray"];
+}
+
+// 颠倒滤镜着色器程序
+- (void)setupReversalShaderProgram {
+    //设置着色器程序
+    [self setupShaderProgramWithName:@"Reversal"];
+}
+
+
+
+// 马赛克滤镜着色器程序
+- (void)setupMosaicShaderProgram {
+    [self setupShaderProgramWithName:@"Mosaic"];
+    
+}
+
+// 六边形马赛克滤镜着色器程序
+- (void)setupHexagonMosaicShaderProgram {
+    [self setupShaderProgramWithName:@"HexagonMosaic"];
+}
+
+// 三角形马赛克滤镜着色器程序
+- (void)setupTriangularMosaicShaderProgram {
+    [self setupShaderProgramWithName:@"TriangularMosaic"];
+}
 
 #pragma mark - 着色器程序  着色器
 // 初始化着色器程序
@@ -339,7 +382,7 @@ typedef struct {
     GLuint textureSlot = glGetUniformLocation(program, "Texture");
     GLuint textureCoordsSlot = glGetAttribLocation(program, "TextureCoords");
     
-   //4.激活纹理,绑定纹理ID
+    //4.激活纹理,绑定纹理ID
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, self.textureID);
     
@@ -349,7 +392,7 @@ typedef struct {
     //6.打开positionSlot 属性并且传递数据到positionSlot中(顶点坐标)
     glEnableVertexAttribArray(positionSlot);
     glVertexAttribPointer(positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(SenceVertex),
-        NULL+offsetof(SenceVertex, positionCoord));
+                          NULL+offsetof(SenceVertex, positionCoord));
     
     //7.打开textureCoordsSlot 属性并传递数据到textureCoordsSlot(纹理坐标)
     glEnableVertexAttribArray(textureCoordsSlot);
