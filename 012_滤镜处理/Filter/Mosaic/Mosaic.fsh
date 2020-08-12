@@ -4,7 +4,7 @@ uniform sampler2D Texture;
 varying highp vec2 TextureCoordsVarying;
 
 const vec2 TexSize = vec2(400.0, 400.0);
-const vec2 MosaicSize = vec2(5.0, 5.0);
+const vec2 MosaicSize = vec2(10.0, 10.0);
 
 void main(){
     

@@ -90,7 +90,7 @@ typedef struct {
     [self bindRenderLayer:layer];
     
     //6.获取处理的图片路径
-    NSString *imagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"kunkun.jpg"];
+    NSString *imagePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"natuo.jpg"];
     //读取图片
     UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
     //将JPG图片转换成纹理图片

@@ -55,6 +55,7 @@
 		1B1EE81E24E2A73300DC9949 /* Gray.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1B1EE81D24E2A73300DC9949 /* Gray.fsh */; };
 		1B1EE82024E2A98E00DC9949 /* Reversal.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 1B1EE81F24E2A98E00DC9949 /* Reversal.vsh */; };
 		1B1EE82224E2A99800DC9949 /* Reversal.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1B1EE82124E2A99800DC9949 /* Reversal.fsh */; };
+		1B1EE82424E3A79000DC9949 /* natuo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B1EE82324E3A79000DC9949 /* natuo.jpg */; };
 		1BB73A3F24D435CF00F42F33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB73A3E24D435CF00F42F33 /* AppDelegate.m */; };
 		1BB73A4224D435CF00F42F33 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB73A4124D435CF00F42F33 /* SceneDelegate.m */; };
 		1BB73A4524D435CF00F42F33 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB73A4424D435CF00F42F33 /* ViewController.m */; };
@@ -221,6 +222,7 @@
 		1B1EE81D24E2A73300DC9949 /* Gray.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Gray.fsh; sourceTree = "<group>"; };
 		1B1EE81F24E2A98E00DC9949 /* Reversal.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Reversal.vsh; sourceTree = "<group>"; };
 		1B1EE82124E2A99800DC9949 /* Reversal.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Reversal.fsh; sourceTree = "<group>"; };
+		1B1EE82324E3A79000DC9949 /* natuo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = natuo.jpg; sourceTree = "<group>"; };
 		1BB73A3B24D435CF00F42F33 /* 003_GLSL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 003_GLSL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB73A3D24D435CF00F42F33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1BB73A3E24D435CF00F42F33 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -829,6 +831,7 @@
 				7C675F6624E02FE0004DFD72 /* SceneDelegate.m */,
 				7C675F6824E02FE0004DFD72 /* ViewController.h */,
 				7C675F6924E02FE0004DFD72 /* ViewController.m */,
+				1B1EE82324E3A79000DC9949 /* natuo.jpg */,
 				7C675F8024E0309F004DFD72 /* kunkun.jpg */,
 				1BFC898924E149CD00E42D0E /* Filter */,
 				7C675F8624E0353C004DFD72 /* Tool */,
@@ -1307,6 +1310,7 @@
 				7C675F7224E02FE2004DFD72 /* LaunchScreen.storyboard in Resources */,
 				1B1EE82224E2A99800DC9949 /* Reversal.fsh in Resources */,
 				1BDCC25F24E294FB00F3215D /* SplitScreen_6.fsh in Resources */,
+				1B1EE82424E3A79000DC9949 /* natuo.jpg in Resources */,
 				1B1EE82024E2A98E00DC9949 /* Reversal.vsh in Resources */,
 				7C675F8124E0309F004DFD72 /* kunkun.jpg in Resources */,
 				1BDCC25824E2941D00F3215D /* SplitScreen_4.vsh in Resources */,
