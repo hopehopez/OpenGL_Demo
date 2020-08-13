@@ -34,7 +34,7 @@ void main(){
     float vecx = x-vn.x;
     float vecy = y-vn.y;
 //    float a = acos(vecx/(sqrt(pow(vecx, 2.0) + pow(vecy, 2.0))));
-    float a = atan(vecx,vecy);
+    float a = atan(vecy,vecx);
     
     vec2 center1 = vec2(vn.x, vn.y - mosaicSize * TH / 2.0);
     vec2 center2 = vec2(vn.x + mosaicSize / 2.0, vn.y - mosaicSize * TH / 2.0);

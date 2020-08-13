@@ -143,6 +143,8 @@
 		7C675F9A24E2E570004DFD72 /* TriangularMosaic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7C675F9924E2E570004DFD72 /* TriangularMosaic.fsh */; };
 		7C675F9F24E2E5B4004DFD72 /* HexagonMosaic.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7C675F9E24E2E5B4004DFD72 /* HexagonMosaic.vsh */; };
 		7C675FA124E2E5BD004DFD72 /* HexagonMosaic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7C675FA024E2E5BD004DFD72 /* HexagonMosaic.fsh */; };
+		7C675FA424E57BF1004DFD72 /* Scale.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7C675FA324E57BF1004DFD72 /* Scale.vsh */; };
+		7C675FA624E57C0E004DFD72 /* Scale.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7C675FA524E57C0E004DFD72 /* Scale.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -354,6 +356,8 @@
 		7C675F9924E2E570004DFD72 /* TriangularMosaic.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = TriangularMosaic.fsh; sourceTree = "<group>"; };
 		7C675F9E24E2E5B4004DFD72 /* HexagonMosaic.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = HexagonMosaic.vsh; sourceTree = "<group>"; };
 		7C675FA024E2E5BD004DFD72 /* HexagonMosaic.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = HexagonMosaic.fsh; sourceTree = "<group>"; };
+		7C675FA324E57BF1004DFD72 /* Scale.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Scale.vsh; sourceTree = "<group>"; };
+		7C675FA524E57C0E004DFD72 /* Scale.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Scale.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -693,8 +697,9 @@
 		1BFC898924E149CD00E42D0E /* Filter */ = {
 			isa = PBXGroup;
 			children = (
-				7C675F9D24E2E5AB004DFD72 /* HexagonMosaic */,
+				7C675FA224E57BE8004DFD72 /* Scale */,
 				7C675F9624E2E558004DFD72 /* TriangularMosaic */,
+				7C675F9D24E2E5AB004DFD72 /* HexagonMosaic */,
 				7C675F9124E2DF9B004DFD72 /* Mosaic */,
 				1BDCC26724E2A59C00F3215D /* Gray */,
 				1BDCC26E24E2A59C00F3215D /* Normal */,
@@ -880,6 +885,15 @@
 				7C675FA024E2E5BD004DFD72 /* HexagonMosaic.fsh */,
 			);
 			path = HexagonMosaic;
+			sourceTree = "<group>";
+		};
+		7C675FA224E57BE8004DFD72 /* Scale */ = {
+			isa = PBXGroup;
+			children = (
+				7C675FA324E57BF1004DFD72 /* Scale.vsh */,
+				7C675FA524E57C0E004DFD72 /* Scale.fsh */,
+			);
+			path = Scale;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1303,6 +1317,7 @@
 				1BDCC25324E2929C00F3215D /* SplitScreen_3.fsh in Resources */,
 				1BDCC27224E2A59D00F3215D /* Normal.vsh in Resources */,
 				1B1EE81C24E2A72900DC9949 /* Gray.vsh in Resources */,
+				7C675FA424E57BF1004DFD72 /* Scale.vsh in Resources */,
 				1BFC898C24E1530B00E42D0E /* Normal.vsh in Resources */,
 				1BDCC25A24E2942A00F3215D /* SplitScreen_4.fsh in Resources */,
 				1BDCC26624E295F500F3215D /* SplitScreen_9.fsh in Resources */,
@@ -1318,6 +1333,7 @@
 				7C675F6F24E02FE2004DFD72 /* Assets.xcassets in Resources */,
 				1B1EE81E24E2A73300DC9949 /* Gray.fsh in Resources */,
 				7C675F9824E2E566004DFD72 /* TriangularMosaic.vsh in Resources */,
+				7C675FA624E57C0E004DFD72 /* Scale.fsh in Resources */,
 				1BDCC27124E2A59D00F3215D /* Normal.fsh in Resources */,
 				7C675F9A24E2E570004DFD72 /* TriangularMosaic.fsh in Resources */,
 				1BDCC25524E292A700F3215D /* SplitScreen_3.vsh in Resources */,
@@ -1986,7 +2002,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2038,7 +2054,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -2121,7 +2137,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "006_GLKit三角形变换/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2139,7 +2155,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "006_GLKit三角形变换/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2155,9 +2171,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DL48DH66J5;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "012_滤镜处理/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2173,9 +2190,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DL48DH66J5;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "012_滤镜处理/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

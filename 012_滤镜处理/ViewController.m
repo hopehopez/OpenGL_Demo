@@ -62,7 +62,7 @@ typedef struct {
     filerBar.delegate = self;
     [self.view addSubview:filerBar];
     
-    NSArray *dataSource = @[@"无",@"分屏_2",@"分屏_3",@"分屏_4",@"分屏_6",@"分屏_9",@"灰度",@"颠倒",@"马赛克",@"六边形马赛克",@"三角形马赛克"];
+    NSArray *dataSource = @[@"无",@"分屏_2",@"分屏_3",@"分屏_4",@"分屏_6",@"分屏_9",@"灰度",@"颠倒",@"马赛克",@"六边形马赛克",@"三角形马赛克",@"缩放",@"灵魂出窍",@"抖动",@"闪白",@"毛刺",@"幻觉"];
     filerBar.itemList = dataSource;
 }
 
@@ -302,9 +302,27 @@ typedef struct {
     }else if (index == 10)
     {
         [self setupTriangularMosaicShaderProgram];
+    }else if(index == 11)
+    {
+        [self setupScaleShaderProgram];
+    }else if(index == 12)
+    {
+        [self setupSoulOutShaderProgram];
+    }else if(index == 13)
+    {
+        [self setupShakeShaderProgram];
+    }else if(index == 14)
+    {
+        [self setupShineWhiteShaderProgram];
+    }else if(index == 15)
+    {
+        [self setupGitchShaderProgram];
+    }else
+    {
+        [self setupVertigoShaderProgram];
     }
     // 重新开始滤镜动画
-//    [self startFilerAnimation];
+    [self startFilerAnimation];
 }
 #pragma mark - 选择 Shader
 // 默认着色器程序
@@ -350,8 +368,6 @@ typedef struct {
     [self setupShaderProgramWithName:@"Reversal"];
 }
 
-
-
 // 马赛克滤镜着色器程序
 - (void)setupMosaicShaderProgram {
     [self setupShaderProgramWithName:@"Mosaic"];
@@ -366,6 +382,37 @@ typedef struct {
 // 三角形马赛克滤镜着色器程序
 - (void)setupTriangularMosaicShaderProgram {
     [self setupShaderProgramWithName:@"TriangularMosaic"];
+}
+// 缩放滤镜着色器程序
+- (void)setupScaleShaderProgram {
+    [self setupShaderProgramWithName:@"Scale"];
+}
+
+// 灵魂出窍滤镜着色器程序
+- (void)setupSoulOutShaderProgram {
+    [self setupShaderProgramWithName:@"SoulOut"];
+    
+}
+
+// 抖动滤镜着色器程序
+-(void)setupShakeShaderProgram {
+    [self setupShaderProgramWithName:@"Shake"];
+
+}
+
+// 闪白滤镜着色器程序
+- (void)setupShineWhiteShaderProgram {
+    [self setupShaderProgramWithName:@"ShineWhite"];
+}
+
+// 毛刺滤镜着色器程序
+- (void)setupGitchShaderProgram {
+    [self setupShaderProgramWithName:@"Glitch"];
+}
+
+// 幻影滤镜着色器程序
+- (void)setupVertigoShaderProgram {
+    [self setupShaderProgramWithName:@"Vertigo"];
 }
 
 #pragma mark - 着色器程序  着色器
